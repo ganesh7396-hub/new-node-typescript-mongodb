@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 class Database {
     private MONGO_URI = process.env.MONGO_URI || "";
 
-    async connect(): Promise<void> {
+    async connect() {
 
         try {
             await mongoose.connect(this.MONGO_URI);
